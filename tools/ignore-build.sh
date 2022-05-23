@@ -1,6 +1,6 @@
 
 # Name of the app to check. Change this to your application name!
-APP=client
+APP=$PROJECT_NAME
 
 # Determine version of Nx installed
 NX_VERSION=$(node -e "console.log(require('./package.json').devDependencies['@nrwl/workspace'])")
