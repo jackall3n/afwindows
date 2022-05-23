@@ -32,10 +32,10 @@ export async function getServerSideProps(
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-export function Customer({ customer }: Props) {
+export function Customer({ customer }: any) {
   const { firstName, lastName, address, jobs, transactions } = customer;
 
-  const balance = sumBy(transactions, (transaction) => {
+  const balance = sumBy(transactions, (transaction: any) => {
     if (transaction.type === 'REFUND') {
       return transaction.amount * -1;
     }
@@ -149,7 +149,7 @@ export function Customer({ customer }: Props) {
           <div className="text-xl font-medium">Transactions</div>
 
           <div className="grid gap-4 py-4">
-            {transactions.map(({ id, date, amount, type, metadata }) => (
+            {transactions.map(({ id, date, amount, type, metadata }: any) => (
               <div key={id} className="flex items-center">
                 <div className="w-9 h-9 rounded-full bg-gray-200 mr-2" />
                 <div className="flex-1">
