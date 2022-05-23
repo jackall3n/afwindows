@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "address" ALTER COLUMN "line2" DROP NOT NULL,
+ALTER COLUMN "line3" DROP NOT NULL;

@@ -1,14 +1,20 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to client!</title>
+        <title>AF Windows</title>
       </Head>
-      <main className="app">
+
+      <main>
+        {/*<aside>*/}
+        {/*  <Sidebar />*/}
+        {/*</aside>*/}
+
         <Component {...pageProps} />
       </main>
     </>
