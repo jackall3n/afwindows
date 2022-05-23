@@ -25,7 +25,7 @@ export async function getServerSideProps(
 
   return {
     props: {
-      customer: serialize(customer),
+      customer,
     },
   };
 }
